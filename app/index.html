@@ -4,14 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque optio, fuga voluptates ullam, esse debitis iure numquam, velit architecto consequuntur. Ab obcaecati consectetur laudantium saepe vero, aperiam tempore fugit.</p>
+    <header class="header">
+        <div class="container">
+            <div class="header__top">
+                <a href="" class="logo">Portfolio</a>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__list-item"><a href="#about" class="menu__list-link">Обо мне</a></li>
+                        <li class="menu__list-item"><a href="#skills" class="menu__list-link">Мои навыки</a></li>
+                        <li class="menu__list-item"><a href="#works" class="menu__list-link">Мои работы</a></li>
+                        <li class="menu__list-item"><a href="#contacts" class="menu__list-link">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header__buttons">
+                    <button class="header__btn">lang</button>
+                    <button class="header__btn">dark</button>
+                </div>
+            </div>
+            <div class="promo">
+                <img src="" alt="" class="promo__img">
+                <h1 class="promo__title">Привет! Меня зовут Диана и я фронтенд-разработчик</h1>
+                <p class="promo__text">помогу вам с </p>
+            </div>
+        </div>
+    </header>
+
+    <section class="about" id="about">
+        <div class="container"></div>
+        <h4 class="section__title works__title">Обо мне</h4>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="container"></div>
+        <h4 class="section__title skills__title">Что я умею</h4>
+    </section>
+
+    <section class="works">
+        <div class="container">
+            <h4 class="section__title works__title">Мои работы</h4>
+            <div class="works__items">
+                <div class="work__item"><img src="images/meditation.jpg" alt="" class="works__item-img"></div>
+                <div class="work__item"><img src="images/calculator.jpg" alt="" class="works__item-img"></div>
+                <div class="work__item"><img src="images/coffeeshop.jpg" alt="" class="works__item-img"></div>
+                <div class="work__item"><img src="images/greenshop.jpg" alt="" class="works__item-img"></div>
+                <div class="work__item"><img src="images/hydra.jpg" alt="" class="works__item-img"></div>
+                <div class="work__item"><img src="images/meditation.jpg" alt="" class="works__item-img"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+        <div class="container"></div>
+        <h4 class="section__title contacts__title">Связаться со мной</h4>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="social__list"></div>
+            </div>
+        </div>
+    </footer>
     
-    <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> -->
-    <script src="js/main.js"></script>
+    <script src="js/main.min.js"></script>
 </body>
 </html>
