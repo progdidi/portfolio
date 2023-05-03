@@ -4,73 +4,227 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>dianochka</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 
     <header class="header">
         <div class="container">
-            <div class="header__top">
-                <a href="" class="logo">Portfolio</a>
+            <div class="header__inner">
+                <a href="#" class="header__logo">Freelancer</a>
+
+                <div class="languages">
+                    <a href="#" class="languages__item" language="russian">RU</a>
+                    <a href="#" class="languages__item active" language="english">ENG</a>
+                </div>
                 <nav class="menu">
                     <ul class="menu__list">
-                        <li class="menu__list-item"><a href="#about" class="menu__list-link">Обо мне</a></li>
-                        <li class="menu__list-item"><a href="#skills" class="menu__list-link">Мои навыки</a></li>
-                        <li class="menu__list-item"><a href="#works" class="menu__list-link">Мои работы</a></li>
-                        <li class="menu__list-item"><a href="#contacts" class="menu__list-link">Контакты</a></li>
+                        <li class="menu__list-item"><a href="#about" class="menu__list-link">About me</a></li>
+                        <li class="menu__list-item"><a href="#skills" class="menu__list-link">My skills</a></li>
+                        <li class="menu__list-item"><a href="#works" class="menu__list-link">Works</a></li>
+                        <li class="menu__list-item"><a href="#contacts" class="menu__list-link">Contacts</a></li>
                     </ul>
                 </nav>
-                <div class="header__buttons">
-                    <button class="header__btn">lang</button>
-                    <button class="header__btn">dark</button>
-                </div>
-            </div>
-            <div class="promo">
-                <img src="" alt="" class="promo__img">
-                <h1 class="promo__title">Привет! Меня зовут Диана и я фронтенд-разработчик</h1>
-                <p class="promo__text">помогу вам с </p>
-            </div>
+            </div>           
+
         </div>
     </header>
 
-    <section class="about" id="about">
-        <div class="container"></div>
-        <h4 class="section__title works__title">Обо мне</h4>
-    </section>
-
-    <section class="skills" id="skills">
-        <div class="container"></div>
-        <h4 class="section__title skills__title">Что я умею</h4>
-    </section>
-
-    <section class="works">
+    <section class="promo">
         <div class="container">
-            <h4 class="section__title works__title">Мои работы</h4>
-            <div class="works__items">
-                <div class="work__item"><img src="images/meditation.jpg" alt="" class="works__item-img"></div>
-                <div class="work__item"><img src="images/calculator.jpg" alt="" class="works__item-img"></div>
-                <div class="work__item"><img src="images/coffeeshop.jpg" alt="" class="works__item-img"></div>
-                <div class="work__item"><img src="images/greenshop.jpg" alt="" class="works__item-img"></div>
-                <div class="work__item"><img src="images/hydra.jpg" alt="" class="works__item-img"></div>
-                <div class="work__item"><img src="images/meditation.jpg" alt="" class="works__item-img"></div>
+            <div class="promo__inner">
+                <div class="promo__info">
+                    <h1 class="promo__info-title" key="title">Hello, I'm Diana Sosnovskaya</h1>
+                    <p class="promo__info-descr">I am starting frontend-developer and i will be glad to help you to make great website </p>
+                    <div class="promo__info-buttons">
+                        <button class="promo__info-btn contact">Contact me</button>
+                        <button class="promo__info-btn cv">Download CV</button>
+                    </div>
+                </div>
+                <div class="promo__visual">
+                    <img src="images/header/main.svg" alt="promo" class="promo__visual-img">
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h3 class="about__title section__title">About me</h3>
+            <p class="about__text">A lifelong computer enthusiast and I would like to be allowed to work with one of the prestigious company. I am an excellent fit for a company given my passion and skills. Read more...</p>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h3 class="skills__title section__title">My skills</h3>
+            <div class="skills__inner">
+                <div class="skills__visual">
+                    <img src="images/skills/visual.svg" alt="" class="skills__visual-img">
+                </div>
+                <div class="skills__items">
+                    <div class="skills__item">
+                        <img src="images/skills/html.svg" alt="html" class="skills__item-img">
+                        <p class="skills__item-name">HTML</p>
+                    </div>
+                    <div class="skills__item">
+                        <img src="images/skills/css.svg" alt="css" class="skills__item-img">
+                        <p class="skills__item-name">CSS</p>
+                    </div>
+                    <div class="skills__item">
+                        <img src="images/skills/js.svg" alt="js" class="skills__item-img">
+                        <p class="skills__item-name">Java Script</p>
+                    </div>
+                    <div class="skills__item">
+                        <img src="images/skills/react.svg" alt="react" class="skills__item-img">
+                        <p class="skills__item-name">React</p>
+                    </div>
+                    <div class="skills__item">
+                        <img src="images/skills/git.svg" alt="git" class="skills__item-img">
+                        <p class="skills__item-name">Git</p>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <section id="works" class="works">
+        <div class="container">
+            <h3 class="section__title works__title">My works</h3>
+
+            <div class="works__inner">
+                <div class="works__item">
+                    <a href="" class="works__item-link">
+                        <div class="works__item-visual">
+                            <img src="images/works/react.jpg" alt="" class="works__item-img">
+                        </div>   
+                        <div class="works__item-descr">
+                            <p class="works__item-text">Многостраничный сайт на основе фреймворка React</p>
+                        </div>                     
+                    </a>
+                </div>
+                <div class="works__item">
+                    <a href="" class="works__item-link">
+                        <div class="works__item-visual">
+                            <img src="images/works/plantshop.jpg" alt="" class="works__item-img">
+                        </div>   
+                        <div class="works__item-descr">
+                            <p class="works__item-text">Главная страница онлайн-магазина растений</p>
+                        </div>                     
+                    </a>
+                </div>
+                <div class="works__item">
+                    <a href="" class="works__item-link">
+                        <div class="works__item-visual">
+                            <img src="images/works/nofo.jpg" alt="" class="works__item-img">
+                        </div>   
+                        <div class="works__item-descr">
+                            <p class="works__item-text">Верстка личного кабинета на онлайн-платформе NFT</p>
+                        </div>                     
+                    </a>
+                </div>
+                <div class="works__item">
+                    <a href="" class="works__item-link">
+                        <div class="works__item-visual">
+                            <img src="images/works/domstroy.jpg" alt="" class="works__item-img">
+                        </div>   
+                        <div class="works__item-descr">
+                            <p class="works__item-text">Многостраничный сайт с использованием JavaScript</p>
+                        </div>                     
+                    </a>
+                </div>
+                <div class="works__item">
+                    <a href="" class="works__item-link">
+                        <div class="works__item-visual">
+                            <img src="images/works/knitwear.jpg" alt="" class="works__item-img">
+                        </div>   
+                        <div class="works__item-descr">
+                            <p class="works__item-text">Лендинг онлайн-магазина одежды</p>
+                        </div>                     
+                    </a>
+                </div>
+                <div class="works__item">
+                    <a href="" class="works__item-link">
+                        <div class="works__item-visual">
+                            <img src="images/works/nude.jpg" alt="" class="works__item-img">
+                        </div>   
+                        <div class="works__item-descr">
+                            <p class="works__item-text">Лендинг финансовой компании</p>
+                        </div>                     
+                    </a>
+                </div>
+                <div class="works__item">
+                    <a href="" class="works__item-link">
+                        <div class="works__item-visual">
+                            <img src="images/works/gentlekiss.jpg" alt="" class="works__item-img">
+                        </div>   
+                        <div class="works__item-descr">
+                            <p class="works__item-text">Лендинг креатора</p>
+                        </div>                     
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="contacts" id="contacts">
-        <div class="container"></div>
-        <h4 class="section__title contacts__title">Связаться со мной</h4>
+    <section id="contacts" class="contacts">
+        <div class="container">
+            <h3 class="contacts__title section__title">Contacts</h3>
+            <div class="contacts__inner">
+                <div class="contacts__description">
+                    <h6 class="contacts__description-title section__subtitle">Get in touch</h6>
+                    <p class="contacts__description-text">Feel me to reaching out with me follow my social media account, send me an email, or simple fill-up enquiry form.</p>
+                    <a href="mail:progdidi@gmail.com" class="contacts__description-mail">progdidi@gmail.com</a>
+                    <p class="contacts__description-telegram">my telegram<a href="" class="contacts__description-link"></a></p>
+                    
+                </div>
+                <form action="" class="contacts__form">
+                    <h6 class="contacts__form-title section__subtitle">Send me a message</h6>
+                    <input type="text" class="contacts__form-input" placeholder="Your name">
+                    <input type="mail" class="contacts__form-input" placeholder="Email">
+                    <textarea name="" id="" cols="30" rows="10" class="contacts__form-text"></textarea>
+                    <button type="submit" class="contacts__form-btn">Send</button>
+                </form>
+            </div>
+
+            
+
+        </div>
     </section>
 
     <footer class="footer">
         <div class="container">
-            <div class="footer__inner">
-                <div class="social__list"></div>
+            <div class="footer__menu">
+                <ul class="menu__list">
+                    <li class="menu__list-item"><a href="#about" class="menu__list-link">About me</a></li>
+                    <li class="menu__list-item"><a href="#skills" class="menu__list-link">Skills</a></li>
+                    <li class="menu__list-item"><a href="#works" class="menu__list-link">Works</a></li>
+                    <li class="menu__list-item"><a href="#contacts" class="menu__list-link">Contacts</a></li>
+                </ul>
+            </div>
+
+            <div class="social">
+                <ul class="social__list">
+                    <li class="social__list-item"><a href="https://github.com/progdidi" class="social__list-link" target="_blank"><img src="images/social/github.svg" alt="github" class="social__list-img"></a></li>
+                    <li class="social__list-item"><a href="https://www.linkedin.com/in/progdidi/" class="social__list-link" target="_blank"><img src="images/social/linkedin.svg" alt="linkedin" class="social__list-img"></a></li>
+                    <li class="social__list-item"><a href="https://www.instagram.com/smetankihochesh/" class="social__list-link" target="_blank"><img src="images/social/instagram.svg" alt="instagram" class="social__list-img"></a></li>
+                    <li class="social__list-item"><a href="" class="social__list-link" target="_blank"><img src="images/social/whatsapp.svg" alt="whatsapp" class="social__list-img"></a></li>
+                    <li class="social__list-item"><a href="" class="social__list-link" target="_blank"><img src="images/social/telegram.svg" alt="telegram" class="social__list-img"></a></li>
+                </ul>
             </div>
         </div>
     </footer>
+
     
+    
+    <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> -->
     <script src="js/main.min.js"></script>
 </body>
 </html>
