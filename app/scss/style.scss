@@ -1,7 +1,9 @@
+
 @import 'base/global';
 @import 'base/var';
 @import 'base/reset';
 @import 'base/lib';
+@import 'animations.scss';
 
 @import 'blocks/buttons';
 
@@ -25,12 +27,16 @@
         max-width: 810px;
         &-item {
             margin-left: 50px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s;
+            &:hover {
+                border-bottom-color: #fff;
+            }
         }
         &-link {
         }
     }
 }
-
 
 .promo {
     padding-top: 39px;
@@ -73,17 +79,22 @@
     }
     &__visual {
         &-img {
-            transform: scale(-1, 1) 
+            transform: scale(-1, 1);
+            animation-name: example;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
         }
     }
 }
+
 
 .about {
     padding: 210px 0;
     background-image: url(../images/about/about-bg.svg);
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-position: center center;
+    background-size: contain;
     &__title {
     }
     
@@ -100,6 +111,7 @@
     }
     &__inner {
         display: flex;
+        align-items: center;
     }
     &__visual {
         &-img {
@@ -116,11 +128,21 @@
         grid-row-gap: 30px;
     }
     &__item {
-        background: $item-color;
+        background: #2F70AF;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.47);
         border-radius: 29px;
         padding: 50px 71px;
         text-align: center;
+        cursor: pointer;
+        transition: all 0.3s;
+        animation-name: fadeInDown;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+        &:hover {
+            background: rgb(0,3,255);
+            background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
+         }
         &-img {
             display: block;
             margin: 0 auto;
@@ -168,9 +190,6 @@
         }
     }
 }
-
-
-
 
 .contacts {
     padding: 212px 0;
