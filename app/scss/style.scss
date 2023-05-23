@@ -49,6 +49,7 @@
     &__inner {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     &__info {
         max-width: 447px;
@@ -75,7 +76,7 @@
             color: #fff;
             &:hover {
                 font-weight: 700;
-                background: linear-gradient(101.81deg, #C961DE 25.84%, #3645A0 98.95%);
+                background: $button-color;
             }
             &.contact {
             }
@@ -86,51 +87,45 @@
     &__visual {
         &-img {
             transform: scale(-1, 1);
-            animation-name: example;
-            animation-duration: 4s;
-            animation-iteration-count: infinite;
-            animation-timing-function: ease;
         }
     }
 }
 
 
 .about {
-    padding: 210px 0;
-    background-image: url(../images/about/about-bg.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
+    padding: 100px 0;
+    
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+    &__media {
+
+    }
+    &__content {
+        .skills__list {
+            padding-left: 40px;
+            &-item {
+                list-style-type:circle;
+                padding: 5px 0;
+                margin-bottom: 10px;
+                @include fadeInRight;
+            }
+        }
+    }
     &__title {
+        text-align: left;
+        margin-bottom: 10px;
+        padding-left: 0;
     }
     
     &__text {
         max-width: 600px;
         margin: 0 auto;
+        margin-bottom: 40px;
         
-    }
-}
-
-.skills {
-    padding: 100px 0;
-    &__title {
-    }
-    &__inner {
-        display: flex;
-        align-items: center;
-    }
-    &__visual {
-        &-img {
-
-        }
-    }
-    &__list {
-        
-        &-item {
-            list-style-type:circle;
-            padding: 5px 0;
-            margin-bottom: 10px;
-        }
     }
 }
 
@@ -148,6 +143,7 @@
         border-radius: 25px;
         border: 2px solid #fff;
         transition: all 0.3s;
+        background: $form-color;
         @include fadeInRight;
         &:hover {
             transform: scale(1.1);
@@ -184,7 +180,7 @@
 }
 
 .contacts {
-    padding: 212px 0;
+    padding: 100px 0;
     &__title {
     }
     &__inner {
@@ -271,10 +267,10 @@
 
 
 .footer {
-    padding: 100px 0 60px 0;
-    background-color: $footer-color;
+    padding: 40px 0 60px 0;
     font-size: 16px;
     line-height: 20px;
+    background-color: $form-color;
     &__menu {
         width: 573px;
         margin: 0 auto;
@@ -282,6 +278,7 @@
         justify-content: center;
         border-bottom: 2px solid rgba(255, 255, 255, 0.15);
         margin-bottom: 20px;
+        padding-bottom: 10px;
     }
 }
 
@@ -293,8 +290,10 @@
         display: flex;
         justify-content: space-between;
         &-item {
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
+        }
+        &-item + .social__list-item {
             margin-left: 10px;
         }
         &-link {
