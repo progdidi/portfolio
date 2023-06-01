@@ -1,59 +1,99 @@
-const languageType = {
-    title: {
-     ru: 'Привет, я Диана Сосновская',
-     eng: 'Hello, I am Diana Sosnovskaya'
-    }
- }
-
-
 $(function(){
     //animation
     new WOW().init();
 
     //languages
-    // function setLang() {
-    //     for (let key in languageType) {
-    //         console.log(key)
-    //         let elem = document.querySelector('.lng-' + key);
-    //         console.log(elem)
-    //         if (elem) {
+    const langType = document.querySelector('.languages-change');
+    langType.addEventListener('click', changeLang);
+
+    function changeLang() {
+        let lang = langType.value;
+        for (let key in languageText) {
+            let elems = document.querySelectorAll('.lng-' + key);
+            elems.forEach((elem) => {
+              if (elem) {
+                elem.innerHTML = languageText[key][lang];
+              }
+            })
             
-    //           elem.innerHTML = languageType[key];
-    //         }
-    //       }
-    // }
-    // const langBtn = document.querySelector('.languages-btn');
-    // langBtn.addEventListener('click', () => {
-    //     setLang()}
-    //     );
+          }
+    }
 
-
-    //hover
+    //hover on works items
     const hoverItems = document.querySelectorAll('.works__item');
     hoverItems.forEach((item) => {
       item.addEventListener('mouseover', () => {
-        item.style.backgroundColor = "red"; 
+        // item.style.transform = "translateX(5%)"; 
       })
       item.addEventListener('mouseout', () => {
         item.style.transform = "";
       })
     })
 
-    //scroll
-    const header = document.querySelector('.header');
-    const scrollHeight = window.pageYOffset;
-    const headerHeight = header.getBoundingClientRect().height;
-
+    //scroll and fixed menu
     window.addEventListener('scroll', () => {
+      const header = document.querySelector('.header');
+      const scrollHeight = window.pageYOffset;
+      const headerHeight = header.getBoundingClientRect().height;
       if(scrollHeight > headerHeight) {
-        
         header.classList.add('fixed-header')
       } else {
-        console.log(scrollHeight)
         header.classList.remove('fixed-header')
       }
     })
+
+    //navbar
+    const menuBtn = document.querySelector('.menu__btn'),
+          menu = document.querySelector('.menu__list');
+
+    menuBtn.addEventListener('click', () => {
+        menu.classList.toggle('menu__list-active');
+    })
+
+
+    //works items slider
+
+    const workItems = document.querySelectorAll('.works__item');
+
+    workItems.forEach((item) => {
+      const prevBtn = item.querySelector('.button-container').querySelector('.prevBtn');
+      const nextBtn = item.querySelector('.button-container').querySelector('.nextBtn');
+      const slides = item.querySelector('.slider-container').querySelectorAll('.slide');
+
+      let counter = 0;
+
+      prevBtn.addEventListener('click', () => {
+        counter--;
+        carousel();
+      })
+
+      nextBtn.addEventListener('click', () => {
+        counter++;
+        carousel();
+      })
+
+
+      slides.forEach((slide, i) => {
+        slide.style.left = `${i * 100}%`;
+      });
+
+      function carousel() {
+        slides.forEach((slide) => {
+            slide.style.transform = `translateX(-${counter * 100}%)`;
+            if(counter === slides.length) {
+                counter = 0;
+                slide.style.transform = `translateX(0%)`;
+            }
+            if(counter < 0) {
+                counter = slides.length - 1;
+                slide.style.transform = `translateX(-${counter * 100}%)`;
+            }
+        });
         
+      }
+
+
+    })       
     
     
 });

@@ -3,7 +3,6 @@
 @import 'base/var';
 @import 'base/reset';
 @import 'base/lib';
-@import 'animations.scss';
 
 @import 'blocks/buttons';
 @import '../../node_modules/animate-scss/animate.scss';
@@ -20,24 +19,7 @@
         font-size: 27px;
         line-height: 30px;
     }
-    .menu {
-        &__list {
-            display: flex;
-            justify-content: space-between;
-            max-width: 810px;
-            &-item {
-                margin-left: 50px;
-                border-bottom: 2px solid transparent;
-                transition: all 0.3s;
-                &:hover {
-                    border-bottom-color: #fff;
-                }
-            }
-            &-link {
-            }
-        }
-    }
-    .languages-btn {
+    .languages-change {
         background-color: $form-color;
         padding: 5px 10px;
         border-radius: 10px;
@@ -50,17 +32,54 @@
     }
 }
 
+.menu {
+    display: flex;
+    &__btn {
+        width: 40px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        display: none;
+        span {
+            height: 4px;
+            width: 100%;
+            background-color: #fff;
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        max-width: 810px;
+        &-item {
+            margin-left: 50px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s;
+            &:hover {
+                border-bottom-color: #fff;
+            }
+        }
+        &-link {
+        }
+    }
+}
+
 .fixed-header {
     position: fixed;
     background-color: $form-color;
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 3;
+    box-shadow: 1px 17px 33px 2px rgba(1, 78, 98, 1);
 }
-
 
 .promo {
     padding-top: 39px;
+    padding-bottom: 10px;
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -68,8 +87,15 @@
     }
     &__info {
         max-width: 447px;
+        padding-top: 150px;
+        &-subtitle {
+            padding: 5px 10px;
+            background-color: $form-color;
+            border-radius: 5px;
+            width:fit-content;
+            margin-bottom: 10px;
+        }
         &-title {
-            padding-top: 150px;
             font-weight: 700;
             font-size: 62px;
             line-height: 72px;
@@ -106,7 +132,6 @@
     }
 }
 
-
 .about {
     padding: 100px 0;
     
@@ -121,11 +146,11 @@
     }
     &__content {
         .skills__list {
-            padding-left: 40px;
+            display: flex;
             &-item {
-                list-style-type:circle;
-                padding: 5px 0;
-                margin-bottom: 10px;
+                width: 40px;
+                height: 40px;
+                margin-right: 15px;
                 @include fadeInRight;
             }
         }
@@ -144,8 +169,8 @@
     }
 }
 
-
 .works {
+    padding-bottom: 20px;
     &__title {
     }
     &__inner {
@@ -154,18 +179,46 @@
         grid-gap: 20px;
     }
     &__item{
-        padding: 45px;
+        padding: 25px;
         border-radius: 25px;
         border: 2px solid #fff;
         transition: all 0.3s;
         background: $form-color;
         @include fadeInRight;
         animation-fill-mode: forwards;
-        &:hover {
-            transform: scale(1.1);
+        .slider {
+            margin-bottom: 40px;
+            position: relative;
+            &-container {
+                margin: 0 auto;
+                height: 40vh;
+                max-width: 80rem;
+                position: relative;
+                overflow: hidden;
+                .slide{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    transition: all 0.3s ease-in-out;
+                    &-img {
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                
+            }
+            .button-container {
+                display: flex;
+                justify-content: space-between;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -12px;
+                right: -12px;
+            }
         }
         &-img {
-            margin-bottom: 40px;
+            
         }
         &-title {
             margin-bottom: 15px;
@@ -189,14 +242,21 @@
             font-size: 18px;
             line-height: 27px;
             font-weight: 600;
-            border: 1px solid #fff;
+            border: 2px solid #fff;
             border-radius: 60px;
+            transition: all 0.5s;
+            &:hover {
+                transform: scale(1.1);
+                font-weight: 700;
+                background: $button-color;
+            }
         }
     }
 }
 
 .contacts {
     padding: 100px 0;
+    margin-bottom: 20px;
     &__title {
     }
     &__inner {
@@ -288,13 +348,21 @@
     line-height: 20px;
     background-color: $form-color;
     &__menu {
-        width: 573px;
+        width: 70%;
         margin: 0 auto;
         display: flex;
         justify-content: center;
         border-bottom: 2px solid rgba(255, 255, 255, 0.15);
         margin-bottom: 20px;
         padding-bottom: 10px;
+    }
+    .menu__list {
+        &-item:first-child {
+            margin-left: 0;
+        }
+        &-item + .menu__list-item {
+            margin-left: 30px;
+        }
     }
 }
 
@@ -318,6 +386,9 @@
         }
     }
 }
+
+@import 'media';
+
 
 
 
