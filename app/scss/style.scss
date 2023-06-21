@@ -215,6 +215,15 @@
                 transform: translateY(-50%);
                 left: -12px;
                 right: -12px;
+                .prevBtn, .nextBtn{
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    padding: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
         }
         &-img {
