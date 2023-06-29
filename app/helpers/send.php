@@ -1,18 +1,19 @@
+<!-- Через 10 секунд после появления сообщения об отправке или ошибке — отправляемся на сайт Кода :) -->
+<meta http-equiv='refresh' content='10; url=http://thecode.local/'>
+<meta charset="UTF-8" />
+<!-- Начался блок PHP -->
 <?php
-/* Здесь проверяется существование переменных */
-if (isset($_POST['name'])) {$phone = $_POST['name'];}
-if (isset($_POST['phone'])) {$name = $_POST['phone'];}
- 
-/* Сюда впишите свою эл. почту */
-$myaddres  = "progdidi@gmail.com"; // кому отправляем
- 
-/* А здесь прописывается текст сообщения, \n - перенос строки */
- 
-/* А эта функция как раз занимается отправкой письма на указанный вами email */
-$sub='Заказ'; //сабж
-$email='Заказ обратного звонка'; // от кого
-$send = mail ($myaddres,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFrom:$email");
- 
-ini_set('short_open_tag', 'On');
-header('Refresh: 3; URL=index.html');
+// Получаем значения переменных из пришедших данных
+$name = $_POST['name'];
+$email = $_POST['email'];
+$message = $_POST['message'];
+// Формируем сообщение для отправки, в нём мы соберём всё, что ввели в форме
+$mes = "Имя: $name \nE-mail: $email \nТекст: $message";
+// Пытаемся отправить письмо по заданному адресу
+// Если нужно, чтобы письма всё время уходили на ваш адрес — замените первую переменную $email на свой адрес электронной почты
+$send = mail('patty1413@yandex.ru', $mes, "Content-type:text/plain; charset = UTF-8\r\nFrom:$email");
+// Если отправка прошла успешно — так и пишем
+if ($send == 'true') {echo "Сообщение отправлено";}
+// Если письмо не ушло — выводим сообщение об ошибке
+else {echo "Ой, что-то пошло не так";}
 ?>
