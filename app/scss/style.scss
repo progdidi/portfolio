@@ -8,26 +8,73 @@
 @import '../../node_modules/animate-scss/animate.scss';
 
 .header {
-    padding: 34px 0 15px;
+    padding: 15px 0 15px;
     &__inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
     &__logo {
-        font-weight: 700;
-        font-size: 27px;
-        line-height: 30px;
+        &-img {
+        }
+        
     }
-    .languages-change {
-        background-color: $form-color;
-        padding: 5px 10px;
-        border-radius: 10px;
-        color: #fff;
+
+    .languages-select {
+        width: 100%;
+        position: relative;
         margin-left: 10px;
-        &:hover {
-            font-weight: 700;
-            background: $button-color;
+        min-width: 82px;
+        &.open {
+            .languages-select__dropdown {
+                display: block;
+            }
+            .languages-select__input {
+                border-bottom: none;
+            }
+        }
+        &__input {
+            background-color: $form-color;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            min-width: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 10px;
+            cursor: pointer;
+            height: 35px;
+
+        }
+
+        &__dropdown {
+            display: none;
+            position: absolute;
+            background-color: $form-color;
+            color: #fff;
+            left: 0;
+            right: 0;
+            top: 34px;
+            max-height: 100px;
+            overflow-y: auto;
+            box-shadow: 2px 3px 5px $form-color;
+
+        }
+
+        &__list {
+            &-item {
+                padding: 5px;
+                border-bottom: 0.5px solid #fff;
+                cursor: pointer;
+                transition: all 0.5s;
+                &:hover {
+                    background-color:  rgba(255, 255, 255, 0.3);
+                }
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
         }
     }
 }
@@ -134,7 +181,6 @@
 
 .about {
     padding: 100px 0;
-    
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -142,6 +188,10 @@
         gap: 30px;
     }
     &__media {
+        &-img {
+            object-fit: cover;
+            max-width: 90%;
+        }
 
     }
     &__content {
@@ -186,6 +236,7 @@
         background: $form-color;
         @include fadeInRight;
         animation-fill-mode: forwards;
+        position: relative;
         .slider {
             margin-bottom: 40px;
             position: relative;
@@ -231,19 +282,23 @@
         }
         &-title {
             margin-bottom: 15px;
-            font-size: 25px;
-            line-height: 35px;
+            font-size: 23px;
+            line-height: 30px;
         }
         &-decr {
             font-size: 18px;
             line-height: 27px;
             color: #929EB0;
             margin-bottom: 45px;
+            padding-bottom: 65px;
         }
         &-buttons {
             display: flex;
             justify-content: space-between;
             gap: 10px;
+            position: absolute;
+            bottom: 25px;
+
         }
         &-link {
             display: block;
@@ -357,7 +412,7 @@
     line-height: 20px;
     background-color: $form-color;
     &__menu {
-        width: 70%;
+        width: 50%;
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -379,7 +434,7 @@
     display: flex;
     justify-content: center;
     &__list {
-        max-width: 240px;
+        max-width: 300px;
         display: flex;
         justify-content: space-between;
         &-item {

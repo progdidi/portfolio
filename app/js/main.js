@@ -3,6 +3,7 @@ $(function(){
     new WOW().init();
 
     //languages
+    /*
     const langType = document.querySelector('.languages-change');
     langType.addEventListener('click', changeLang);
 
@@ -18,6 +19,8 @@ $(function(){
             
           }
     }
+
+    */
 
     //hover on works items
     const hoverItems = document.querySelectorAll('.works__item');
