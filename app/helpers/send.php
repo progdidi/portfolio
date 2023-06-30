@@ -11,7 +11,7 @@ $message = $_POST['message'];
 $mes = "Имя: $name \nE-mail: $email \nТекст: $message";
 // Пытаемся отправить письмо по заданному адресу
 // Если нужно, чтобы письма всё время уходили на ваш адрес — замените первую переменную $email на свой адрес электронной почты
-$send = mail('patty1413@yandex.ru', $mes, "Content-type:text/plain; charset = UTF-8\r\nFrom:$email");
+$send = mail('patty1413@yandex.ru', $mes, "Content-type:text/html; charset = UTF-8\r\nFrom:$email");
 // Если отправка прошла успешно — так и пишем
 if ($send == 'true') {echo "Сообщение отправлено";}
 // Если письмо не ушло — выводим сообщение об ошибке
