@@ -20,8 +20,8 @@ const languageText = {
      "eng": 'I am starting frontend-developer and i will be glad to help you to make great website '
    },
    "about": {
-   "ru": 'Я закончила БГЭУ (Белорусский государственный экономический университет) и проработала бухгалтером 8 лет, но всегда чувствовала, насколько мне интересны технологии и особенно в сфере веб-разработки, я решила изменить свою жизнь. И вот уже год изучаю технику и получаю от этого огромное удовольствие! Люблю творить и постоянно развиваться!',
-   "eng": 'I graduated from the BSEU (Belarusian State Economic University) and worked as an accountant for 8 years, but I always felt how interested I was in technology and especially in the field of web development, I decided to change my life. And now I have been studying technology for a year and I get great pleasure from it! I like to create and constatntly develop! '
+   "ru": 'Я закончила Белорусский государственный экономический университет и проработала бухгалтером 8 лет, но всегда чувствовала, насколько мне интересны технологии и особенно сфера веб-разработки, поскольку она связана с созданием полезных и стильных вещей! И вот уже год я изучаю технологии связанные с фронтенд-разработкой. Люблю решать интересные задачи, создавать и постоянно развиваться!',
+   "eng": 'I graduated from the BSEU (Belarusian State Economic University) and worked as an accountant for 8 years, but I always felt how interested I was in technology and especially in the field of web development, because it is about creation useful and stylish things. And now I have been studying technology for a year and I get great pleasure from it! I like to create and constatntly develop! '
    },
 
    "coffeshop": {

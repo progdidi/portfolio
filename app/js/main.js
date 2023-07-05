@@ -2,26 +2,6 @@ $(function(){
     //animation
     new WOW().init();
 
-    //languages
-    /*
-    const langType = document.querySelector('.languages-change');
-    langType.addEventListener('click', changeLang);
-
-    function changeLang() {
-        let lang = langType.value;
-        for (let key in languageText) {
-            let elems = document.querySelectorAll('.lng-' + key);
-            elems.forEach((elem) => {
-              if (elem) {
-                elem.innerHTML = languageText[key][lang];
-              }
-            })
-            
-          }
-    }
-
-    */
-
     //hover on works items
     const hoverItems = document.querySelectorAll('.works__item');
     hoverItems.forEach((item) => {
