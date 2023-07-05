@@ -35,9 +35,7 @@ $(function(){
 
 
     //works items slider
-
     const workItems = document.querySelectorAll('.works__item');
-
     workItems.forEach((item) => {
       const prevBtn = item.querySelector('.button-container').querySelector('.prevBtn');
       const nextBtn = item.querySelector('.button-container').querySelector('.nextBtn');
@@ -76,7 +74,24 @@ $(function(){
       }
 
 
-    })       
+    })   
+
+
+
+    //contacts form    
+    const form = document.querySelector('.contacts__form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      $.ajax({
+        type: "POST",
+        url: "mailer/mailer/smart.php",
+        data: $(this).serialize()
+      }).done(function() {
+        $(this).find("input").val("");
+      });
+      return false;
+
+    })
     
     
 });
