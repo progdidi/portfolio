@@ -49,6 +49,11 @@ const languageText = {
       "eng": 'Responsive multilanguage portfolio landing page , made using HTML, SCSS, Javascript. Compiled via Gulp'
    },
 
+   "generator": {
+      "ru": 'Генератор поддерживающих и мотивирующих фраз JavaScript',
+      "eng": 'Supportive quotes generator on JavaScript'
+   },
+
    "visit": {
       "ru": 'перейти на сайт',
       "eng": 'visit'

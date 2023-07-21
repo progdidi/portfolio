@@ -228,25 +228,27 @@
 }
 
 .works {
-    padding-bottom: 20px;
+    padding-bottom: 70px;
     &__title {
     }
     &__inner {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 20px;
+
     }
     &__item{
         padding: 25px;
         border-radius: 25px;
-        border: 2px solid #fff;
         transition: all 0.3s;
         background: $form-color;
         @include fadeInRight;
         animation-fill-mode: forwards;
         position: relative;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        margin-bottom: 30px;
+        width: 100%;
         .slider {
             margin-bottom: 20px;
+            margin-right: 30px;
             position: relative;
             &-container {
                 margin: 0 auto;
@@ -263,6 +265,7 @@
                         object-fit: contain;
                         height: 100%;
                         margin: 0 auto;
+                        display: block;
                     }
                 }
                 
@@ -273,19 +276,24 @@
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
-                left: -12px;
-                right: -12px;
+                left: 5px;
+                right: 5px;
                 .prevBtn, .nextBtn{
                     border-radius: 50%;
-                    width: 40px;
-                    height: 40px;
+                    width: 20px;
+                    height: 20px;
                     padding: 10px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    background-color: rgba(255, 255, 255, 0.55);
                 }
             }
         }
+        &-about {
+
+        }
+
         &-img {
             
         }
@@ -317,7 +325,7 @@
             font-size: 18px;
             line-height: 27px;
             font-weight: 600;
-            border: 1px solid #fff;
+            background-color: $background-color;
             border-radius: 60px;
             transition: all 0.5s;
             &:hover {
