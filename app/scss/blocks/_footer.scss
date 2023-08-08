@@ -1,0 +1,42 @@
+@import '../base/var';
+
+.footer {
+    padding: 40px 0 60px 0;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: $form-color;
+    &__menu {
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+    .menu__list {
+        &-item:first-child {
+            margin-left: 0;
+        }
+        &-item + .menu__list-item {
+            margin-left: 30px;
+        }
+    }
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    &__list {
+        max-width: 300px;
+        display: flex;
+        justify-content: space-between;
+        &-item {
+            width: 30px;
+            height: 30px;
+        }
+        &-item + .social__list-item {
+            margin-left: 10px;
+        }
+    }
+}

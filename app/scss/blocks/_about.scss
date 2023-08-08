@@ -1,0 +1,41 @@
+@import '../../../node_modules/animate-scss/animate.scss';
+
+.about {
+    padding: 100px 0;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+    &__media {
+        &-img {
+            object-fit: cover;
+            max-width: 90%;
+        }
+
+    }
+    &__content {
+        .skills__list {
+            display: flex;
+            &-item {
+                width: 40px;
+                height: 40px;
+                margin-right: 15px;
+                @include fadeInRight;
+            }
+        }
+    }
+    &__title {
+        text-align: left;
+        margin-bottom: 10px;
+        padding-left: 0;
+    }
+    
+    &__text {
+        max-width: 600px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        
+    }
+}

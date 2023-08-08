@@ -1,0 +1,86 @@
+.contacts {
+    padding: 100px 0;
+    margin-bottom: 20px;
+    &__title {
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        max-width: 900px;
+        margin: 0 auto;
+        background: $form-color;
+        padding: 53px 125px;
+        border-radius: 30px;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: '';
+            width: 300px;
+            height: 400px;
+            background-image: url(../images/contacts/contacts.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            bottom: -100px;
+            right: 0;
+        }
+
+    }
+    &__description {
+        max-width: 250px;
+        &-title {
+            margin-bottom: 50px;
+        }
+        &-text {
+            margin-bottom: 50px;
+
+        }
+        &-mail {
+            display: block;
+            margin-bottom: 14px;
+
+        }
+        &-telegram {
+
+        }
+        &-link {
+
+        }
+    }
+    &__form {
+        max-width: 350px;        
+        display: flex;
+        flex-direction: column;
+        &-title {
+            margin-bottom: 20px;
+        }
+        &-input {
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0px 10px 20px rgba(2, 4, 6, 0.15);
+            border-radius: 10px;
+            padding: 10px 20px 6px 20px;
+            font-size: 17px;
+            line-height: 24px;
+            margin-bottom: 20px;
+            border: none;
+            color: #fff;
+            &::placeholder {
+                color: #fff;
+            }
+        }
+        &-text {
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0px 10px 20px rgba(2, 4, 6, 0.15);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 10px 20px 6px 20px;
+            color: #fff;
+        }
+        &-btn {
+            max-width: 160px;
+            padding: 8px 17px;
+            box-shadow: 0px 10px 20px rgba(2, 4, 6, 0.15);
+            border-radius: 10px;
+        }
+    }
+}
