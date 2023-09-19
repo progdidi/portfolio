@@ -1,6 +1,7 @@
 $(function(){
     //animation
     new WOW().init();
+    
 
     //hover on works items
     const hoverItems = document.querySelectorAll('.works__item');

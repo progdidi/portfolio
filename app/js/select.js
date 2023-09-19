@@ -23,6 +23,7 @@ function changeLang(chosenLang) {
         })
         
     }
+
 }
 
 
@@ -32,9 +33,13 @@ langListItem.forEach((lang) => {
         let langValue = e.currentTarget.innerHTML;
         langInput.querySelector('span').innerHTML = langValue;
         changeLang(langValue);
+        localStorage.setItem('language', langValue);
         langSelector.classList.remove('open');
     })
 })
+
+changeLang(localStorage.getItem('language'));
+
 
 
 
