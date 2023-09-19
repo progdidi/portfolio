@@ -23,6 +23,18 @@
         transition: all 0.3s;
         position: relative;  
         margin-bottom: 40px;      
+        &-tags {
+            display: flex;
+            gap: 7px;
+            .works-tag {
+                padding: 5px 10px;
+                background-color: #234c63;
+                border-radius: 5px;
+                width:fit-content;
+                margin-bottom: 10px;
+            }
+        }
+        
         .slider {
             margin-bottom: 20px;
             margin-right: 30px;
