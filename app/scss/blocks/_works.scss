@@ -5,8 +5,9 @@
     padding-bottom: 70px;
     &__inner {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 40px;
     }
     &__item{
         padding: 30px 20px;
@@ -21,10 +22,11 @@
         &-tags {
             display: flex;
             gap: 7px;
+            margin-bottom: 30px;
             .works-tag {
                 padding: 3px 8px;
                 font-size: 14px;
-                background-color: #234c63;
+                background-color: $background-color;
                 border-radius: 5px;
                 width:fit-content;
             }
