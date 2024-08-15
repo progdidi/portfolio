@@ -1,4 +1,5 @@
 .contacts {
+    margin-bottom: 50px;
     .contacts__title {
     }
     .section__title {
@@ -6,8 +7,10 @@
     .contacts__text {
     }
     .contacts-form {
+        max-width: 60%;
     }
     .contacts-form__input {
+        display: block;
     }
     .contacts-form__textarea {
     }

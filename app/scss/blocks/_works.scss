@@ -1,4 +1,5 @@
 .works {
+    margin-bottom: 100px;
     .works__title {
     }
     .section__title {
@@ -6,10 +7,22 @@
     .works-slider {
     }
     .works-wrapper {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .works__items {
+        display: flex;
+        gap: 30px;
+        align-items: flex-start;
     }
     .works-item {
+        width: 30%;
     }
     .works-item__tags {
+        display: flex;
+        gap: 15px;
+        align-items: center;
     }
     .works-item__tag {
     }
@@ -30,5 +43,7 @@
     .works-item__links {
     }
     .works-item__link {
+        padding: 5px;
+        border: 1px solid #fff;
     }
 }

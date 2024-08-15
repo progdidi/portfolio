@@ -1,22 +1,38 @@
 .footer {
+    padding: 20px 0;
     .footer-menu {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #fff;
+        
     }
     .menu {
+        .menu__list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+        .menu__list-item {
+        }
+        .menu__list-link {
+        }
     }
-    .menu__list {
-    }
-    .menu__list-item {
-    }
-    .menu__list-link {
-    }
+    
     .social {
+        padding: 10px 0;
     }
     .social__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
     }
     .social__list-item {
     }
     .social__list-link {
     }
     .social__list-img {
+        width: 40px;
+        height: 40px;
     }
 }
