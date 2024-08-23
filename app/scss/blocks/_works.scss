@@ -1,5 +1,6 @@
 .works {
     margin-bottom: 100px;
+    padding: 50px 0;
     .works__title {
     }
     .section__title {
@@ -12,12 +13,11 @@
     }
 
     .works__items {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 30px;
-        align-items: flex-start;
     }
     .works-item {
-        width: 30%;
     }
     .works-item__tags {
         display: flex;

@@ -1,8 +1,17 @@
 .skills {
     margin-bottom: 100px;
     .skills__title {
+        text-align: center;
+        font-family: var(--main-font);
+        line-height: 42px;
+        font-size: 35px;
+        margin-bottom: 20px;
     }
     .skills__items {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
     }
     .skills__item {
     }

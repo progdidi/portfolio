@@ -1,18 +1,26 @@
 .contacts {
+    padding: 50px 0;
     margin-bottom: 50px;
     .contacts__title {
     }
     .section__title {
+        margin-bottom: 20px;
+        text-align: center;
     }
     .contacts__text {
+        margin-bottom: 20px;
+        text-align: center;
     }
     .contacts-form {
-        max-width: 60%;
+        max-width: 50%;
+        margin: 0 auto;
     }
     .contacts-form__input {
         display: block;
+        width: 100%;
     }
     .contacts-form__textarea {
+        width: 100%;
     }
     .contacts-form__btn {
     }
