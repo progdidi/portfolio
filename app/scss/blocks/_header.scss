@@ -1,11 +1,13 @@
 .header {
     margin-bottom: 100px;
-    min-height: 100vh;
     .header__top {
+        padding: 30px 0;
         display: flex;
         align-items: center;
-        justify-content: space-between;        
+        justify-content: flex-end;       
         .logo {
+            display: block;
+            margin-right: auto;
         }
         .menu {
             .menu__list {
@@ -20,9 +22,9 @@
         }
         
         .menu-btn {
+            display: none;
             width: 40px;
             height: 30px;
-            display: flex;
             flex-direction: column;
             justify-content: space-between;
             span {
@@ -33,17 +35,18 @@
         }
         .lang-btn {
             color: #fff;
+            margin-left: 40px;
             .lang-btn__item {
             }
         }
         
     }
     .promo {
-        padding-top: 112px;
+        min-height: calc(100vh - 80px);
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .promo__info {
+        &__info {
             max-width: 40%;
             .promo__info-subtitle {
                 padding: 5px 10px;
@@ -52,19 +55,28 @@
                 width: fit-content;
                 margin-bottom: 10px;
             }
-            .promo__info-title {
+            &-title {
                 line-height: 60px;
                 font-size: 57px;
+                margin-bottom: 40px;
             }
             .promo__info-text {
+                margin-bottom: 30px;
             }
             .promo__buttons {
+                display: flex;
+                gap: 20px;
+                align-items: center;
             }
             .promo-btn {
+                background-color: var(--accent-color);
+                padding: 15px 0;
+                width: 150px;
+                text-align: center;
             }
         }
         
-        .promo__media {
+        &__media {
             max-width: 50%;
             .promo__media-img {
             }
@@ -73,3 +85,46 @@
     }
     
 }
+
+@media (max-width: 1000px) {
+    .header {
+        .promo {
+            padding-top: 100px;
+            flex-direction: column;
+            justify-content: unset;
+            gap: 40px;
+            &__info {
+                max-width: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            &__media {
+                max-width: 70%;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        .promo {
+           
+            &__info {
+                max-width: 100%;
+                &-title {
+                    font-size: 42px;
+                    line-height: 50px;
+                }
+            }
+
+            &__media {
+                max-width: 85%;
+            }
+        }
+    }
+}
+

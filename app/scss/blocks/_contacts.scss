@@ -8,8 +8,11 @@
         text-align: center;
     }
     .contacts__text {
-        margin-bottom: 20px;
+        
         text-align: center;
+        max-width: 70%;
+        margin: 0 auto;
+        margin-bottom: 40px;
     }
     .contacts-form {
         max-width: 50%;
@@ -18,10 +21,58 @@
     .contacts-form__input {
         display: block;
         width: 100%;
+        border-radius: 5px;
+        background-color: var(--contrast-color);
+        border: none;
+        margin-bottom: 10px;
+        padding: 10px;
     }
     .contacts-form__textarea {
         width: 100%;
+        border-radius: 5px;
+        background-color: var(--contrast-color);
+        border: none;
+        padding: 10px;
     }
     .contacts-form__btn {
+        display: block;
+        width: 180px;
+        color: var(--text-color);
+        padding: 15px 0;
+        margin: 0 auto;
+        background-color: var(--accent-color);
     }
+}
+
+@media (max-width: 850px) {
+    .contacts{
+        .contacts-form {
+            max-width: 70%;
+        }
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .contacts{
+        .contacts__text {
+            max-width: 90%;
+        }
+        .contacts-form {
+            max-width: 80%;
+        }
+    }
+    
+}
+
+@media (max-width: 450px) {
+    .contacts{
+        .contacts__text {
+            max-width: 90%;
+        }
+        .contacts-form {
+            max-width: 90%;
+        }
+    }
+    
 }
